@@ -13,15 +13,19 @@
 
 ## このシリーズのゴール
 
-TypeScriptの文法を一通り学んだあと、最終章（[12章](lessons/12-next-steps-discord-bot.md)）でDiscord Botを作るための最初の一歩まで案内します。1〜11章はDiscord Bot開発に直結する内容を選んで構成しているので、寄り道せずにゴールへたどり着けるはずです。
+TypeScriptの文法を一通り学んだあと、[12章](lessons/12-next-steps-discord-bot.md)でDiscord Botを作るための最初の一歩まで案内します(初級編)。そこからさらに一歩進みたい人向けに、TypeScriptの型システムをもう一段深く扱う中級編（13〜20章）も用意しています。中級編は説明だけでなく、実際に動くプロジェクト「[command-registry](project/command-registry/)」を作りながら進みます。
 
 ## 使い方
 
-0〜9章は通読を想定しています。TypeScriptの文法を順番に積み上げる構成になっているので、飛ばさずに順番に読んでください。10章以降は少し性質が変わり、必要になったタイミングで読み返す参照部に近くなります。
+初級編（00〜09章）は通読を想定しています。TypeScriptの文法を順番に積み上げる構成になっているので、飛ばさずに順番に読んでください。10〜12章は少し性質が変わり、必要になったタイミングで読み返す参照部に近くなります。
+
+中級編（13〜20章）は、[command-registry](project/command-registry/)プロジェクトのコードを解説する形で書かれています。章を読みながら、実際に`pnpm install`してコードを動かし、`pnpm test`でテストを通すところまでやってみることを想定しています。
 
 各章の想定所要時間は目安であり、詰まった場合はもっとかかっても問題ありません。実際に手元でコードを動かしながら読むことを前提にした時間です。
 
 ## 目次
+
+### 初級編
 
 | 章 | タイトル | 学べること |
 |---|---|---|
@@ -38,6 +42,19 @@ TypeScriptの文法を一通り学んだあと、最終章（[12章](lessons/12-
 | 10 | [モジュールとパッケージ管理](lessons/10-modules-and-packages.md) | import/export、pnpmでのパッケージ追加、tsconfig.json |
 | 11 | [エラー処理をきちんと書く](lessons/11-error-handling.md) | try/catch、カスタムエラークラス |
 | 12 | [次の一歩：Discord Botを作る](lessons/12-next-steps-discord-bot.md) | discord.jsの導入、Botトークンの安全な扱い方 |
+
+### 中級編（実践プロジェクト: [command-registry](project/command-registry/)）
+
+| 章 | タイトル | 学べること |
+|---|---|---|
+| 13 | [ジェネリクス](lessons/13-generics.md) | 型を引数として受け取る関数・クラス、extends制約 |
+| 14 | [ユーティリティ型](lessons/14-utility-types.md) | Record、Partial、Pick、Omit、Readonly、Required |
+| 15 | [マップ型とkeyof](lessons/15-mapped-types-and-keyof.md) | keyof、インデックスアクセス型、マップ型、typeof |
+| 16 | [条件型とinfer](lessons/16-conditional-types-and-infer.md) | 条件型、infer、Awaited・ReturnTypeの仕組み |
+| 17 | [カスタム型ガードと網羅性チェック](lessons/17-custom-type-guards.md) | is述語、never型による分岐漏れの検出 |
+| 18 | [デコレータ](lessons/18-decorators.md) | メソッドデコレータ、横断的な処理の分離 |
+| 19 | [vitestでテストを書く](lessons/19-testing-with-vitest.md) | describe/it/expect、非同期・エラーのテスト |
+| 20 | [プロジェクト全体を振り返る](lessons/20-project-walkthrough.md) | 全部品のつながり、型安全性の考え方のまとめ |
 
 用語のまとめは[用語集](lessons/99-glossary.md)にあります。本文中に出てきた専門用語で意味を忘れたときは、そちらを引いてください。
 
@@ -57,4 +74,4 @@ TypeScriptの文法を一通り学んだあと、最終章（[12章](lessons/12-
 
 ## 最終更新日
 
-2026-09-04（初版作成）
+2026-09-04（中級編13〜20章、command-registryプロジェクトを追加）

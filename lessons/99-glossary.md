@@ -36,5 +36,17 @@
 | throw / try / catch | エラーを発生させる（throw）・捕まえて処理する（try/catch）構文 | [11](11-error-handling.md) |
 | カスタムエラークラス | `Error`を継承して作る、独自のエラーの種類 | [11](11-error-handling.md) |
 | インテント（Intent） | discord.jsでBotが受け取るイベントの種類を事前に宣言する仕組み | [12](12-next-steps-discord-bot.md) |
+| ジェネリクス（generics） | 型そのものを引数として受け取り、同じロジックを複数の型で使い回す仕組み | [13](13-generics.md) |
+| ユーティリティ型 | Record・Partial・Pick・Omitなど、既存の型を加工して新しい型を作る組み込みの型 | [14](14-utility-types.md) |
+| keyof | オブジェクト型からプロパティ名だけを取り出し、ユニオン型にする演算子 | [15](15-mapped-types-and-keyof.md) |
+| インデックスアクセス型 | `T[K]`の形で、オブジェクト型からキーKに対応する値の型を取り出す書き方 | [15](15-mapped-types-and-keyof.md) |
+| マップ型 | `{ [K in keyof T]: ... }`の形で、型の全プロパティに同じ変換を適用する構文 | [15](15-mapped-types-and-keyof.md) |
+| typeof（型の位置での） | 既存の値から、その形をそのまま型として取り出す演算子 | [15](15-mapped-types-and-keyof.md) |
+| 条件型 | `T extends U ? X : Y`の形で、型のレベルで分岐する構文 | [16](16-conditional-types-and-infer.md) |
+| infer | 条件型の中で、マッチした型の一部を新しい型変数として取り出すキーワード | [16](16-conditional-types-and-infer.md) |
+| is述語（type predicate） | `x is T`という戻り値の型で、関数に型の絞り込み効果を持たせる書き方 | [17](17-custom-type-guards.md) |
+| never型 | 「絶対に発生しない値」を表す型。網羅性チェックに使う | [17](17-custom-type-guards.md) |
+| デコレータ | `@関数名`の形で、クラスやメソッドに横断的な処理を後付けする構文 | [18](18-decorators.md) |
+| vitest | このシリーズで使うテストランナー。describe/it/expectでテストを書く | [19](19-testing-with-vitest.md) |
 
 [目次に戻る](../README.md)

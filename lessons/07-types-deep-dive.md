@@ -54,7 +54,7 @@ type Aged = { age: number };
 
 type Person = Named & Aged;
 
-const p: Person = { name: "瑛奈", age: 20 }; // nameとage、両方が必要
+const p: Person = { name: "Neko", age: 20 }; // nameとage、両方が必要
 ```
 
 使用頻度はユニオン型ほど高くありませんが、「共通のプロパティを持つ型」と「個別のプロパティを持つ型」を分けて定義し、あとから組み合わせたい場面で使います。

@@ -5,3 +5,5 @@ dist/
 
 # Wiki用ステージングフォルダ（本体リポジトリには含めない。Wikiリポジトリへ別途push）
 wiki/
+
+CLAUDE.md

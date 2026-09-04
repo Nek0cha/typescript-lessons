@@ -27,11 +27,11 @@ class User {
   }
 }
 
-const user = new User("瑛奈", 20);
-console.log(user.greet()); // "こんにちは、瑛奈さん"
+const user = new User("Neko", 20);
+console.log(user.greet()); // "こんにちは、Nekoさん"
 ```
 
-`constructor`はコンストラクタと呼ばれる特殊なメソッドで、`new User("瑛奈", 20)`のように`new`を使ってインスタンス（そのクラスの実体）を作るときに1度だけ呼ばれます。渡された引数を`this.name`、`this.age`のようにプロパティへ代入するのが典型的な役割です。`this`はそのインスタンス自身を指します。
+`constructor`はコンストラクタと呼ばれる特殊なメソッドで、`new User("Neko", 20)`のように`new`を使ってインスタンス（そのクラスの実体）を作るときに1度だけ呼ばれます。渡された引数を`this.name`、`this.age`のようにプロパティへ代入するのが典型的な役割です。`this`はそのインスタンス自身を指します。
 
 ## なぜクラスを使うのか
 

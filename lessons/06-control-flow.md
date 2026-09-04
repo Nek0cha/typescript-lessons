@@ -41,7 +41,7 @@ switch (rank) {
 ## for / while
 
 ```typescript
-const names: string[] = ["瑛奈", "たかし", "みさき"];
+const names: string[] = ["Neko", "たかし", "みさき"];
 
 // 昔ながらのfor文。インデックス(添字)を自分で管理する
 for (let i = 0; i < names.length; i++) {

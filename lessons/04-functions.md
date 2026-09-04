@@ -68,8 +68,8 @@ function greet(name: string, honorific?: string): string {
   return `こんにちは、${name}${honorific}`;
 }
 
-greet("瑛奈");          // "こんにちは、瑛奈さん"
-greet("瑛奈", "先輩");   // "こんにちは、瑛奈先輩"
+greet("Neko");          // "こんにちは、Nekoさん"
+greet("Neko", "先輩");   // "こんにちは、Neko先輩"
 ```
 
 `honorific?: string`と書くと、`honorific`の型は実質`string | undefined`（stringかundefinedのどちらか）になります。渡さなかった場合は自動的に`undefined`が入ります。
@@ -81,8 +81,8 @@ function greet(name: string, honorific: string = "さん"): string {
   return `こんにちは、${name}${honorific}`;
 }
 
-greet("瑛奈");          // "こんにちは、瑛奈さん"
-greet("瑛奈", "先輩");   // "こんにちは、瑛奈先輩"
+greet("Neko");          // "こんにちは、Nekoさん"
+greet("Neko", "先輩");   // "こんにちは、Neko先輩"
 ```
 
 `honorific?: string`との違いはここにあります。`?`は渡さなかったら`undefined`のままにする一方、`= "さん"`は渡さなかったときに`"さん"`という具体的な値で埋めます。関数の中で`undefined`かどうかの分岐を書きたくない場合は、デフォルト値のほうがコードがすっきりします。
@@ -96,13 +96,13 @@ greet("瑛奈", "先輩");   // "こんにちは、瑛奈先輩"
 function createUser(name: string, age: number, isAdmin: boolean, email: string) {
   // ...
 }
-createUser("瑛奈", 20, false, "eina@example.com"); // どれが何の値か分かりにくい
+createUser("Neko", 20, false, "neko@example.com"); // どれが何の値か分かりにくい
 
 // オブジェクトにまとめると、呼び出し側でも意味が分かる
 function createUser2(user: { name: string; age: number; isAdmin: boolean; email: string }) {
   // ...
 }
-createUser2({ name: "瑛奈", age: 20, isAdmin: false, email: "eina@example.com" });
+createUser2({ name: "Neko", age: 20, isAdmin: false, email: "neko@example.com" });
 ```
 
 Discord Botの開発では、Discordから受け取るデータ（メッセージの内容、送信者の情報など）がすべてオブジェクトの形で渡ってくるため、この書き方に早めに慣れておくと後の章がスムーズになります。

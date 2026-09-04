@@ -65,7 +65,7 @@ function greet(name: string): string {
   return `こんにちは、${name}さん！`;
 }
 
-console.log(greet("瑛奈"));
+console.log(greet("Neko"));
 ```
 
 ## コンパイルして実行する
@@ -82,7 +82,7 @@ pnpm exec tsc
 
 ```bash
 node dist/index.js
-# こんにちは、瑛奈さん！
+# こんにちは、Nekoさん！
 ```
 
 「コードを書く → `tsc`でコンパイル → `node`で実行する」という2段階の流れが、TypeScript開発の基本形です。
@@ -105,7 +105,7 @@ VS Codeで開いていれば、`123`の下に赤い波線が表示されるは�
 Argument of type 'number' is not assignable to parameter of type 'string'.
 ```
 
-「`greet`関数は文字列を受け取る約束なのに、数値を渡している」とエディタが教えてくれています。この状態で`pnpm exec tsc`を実行するとコンパイル自体が失敗し、`dist/index.js`は更新されません。実行時に初めてバグに気づくのではなく、コードを書いている最中に気づけるというのが、00章で説明した型の恩恵です。試したら`greet("瑛奈")`に戻しておいてください。
+「`greet`関数は文字列を受け取る約束なのに、数値を渡している」とエディタが教えてくれています。この状態で`pnpm exec tsc`を実行するとコンパイル自体が失敗し、`dist/index.js`は更新されません。実行時に初めてバグに気づくのではなく、コードを書いている最中に気づけるというのが、00章で説明した型の恩恵です。試したら`greet("Neko")`に戻しておいてください。
 
 ## 補足：tscを毎回打つのが面倒なとき
 

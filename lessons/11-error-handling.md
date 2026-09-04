@@ -115,7 +115,7 @@ function findUser(id: string) {
   if (id !== "001") {
     throw new NotFoundError(`id: ${id} のユーザーが見つかりません`);
   }
-  return { id, name: "瑛奈" };
+  return { id, name: "Neko" };
 }
 
 try {

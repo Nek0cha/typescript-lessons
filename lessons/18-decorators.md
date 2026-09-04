@@ -53,9 +53,9 @@ class Greeter {
   }
 }
 
-new Greeter().greet("瑛奈");
-// [call] greet("瑛奈")
-// こんにちは、瑛奈さん  ← greetの戻り値をconsole.logした場合
+new Greeter().greet("Neko");
+// [call] greet("Neko")
+// こんにちは、Nekoさん  ← greetの戻り値をconsole.logした場合
 ```
 
 `greet`メソッドの中身(`return \`こんにちは、${name}さん\`;`)は一切変更していません。デコレータを付けるかどうかだけで、ログの有無を切り替えられます。11章で扱った`try`/`catch`によるエラーハンドリングも、同じ発想で「エラーが起きたらログに残す」デコレータとして切り出せます。

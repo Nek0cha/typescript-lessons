@@ -6,7 +6,7 @@
 
 ```typescript
 const numbers: number[] = [1, 2, 3];
-const names: string[] = ["瑛奈", "たかし"];
+const names: string[] = ["Neko", "たかし"];
 
 numbers.push(4);     // OK
 numbers.push("5");   // エラー: Argument of type 'string' is not assignable to parameter of type 'number'.
@@ -31,7 +31,7 @@ const numbers = [1, 2, 3]; // number[] だとTypeScriptが自動で推論する
 const scores: number[] = [80, 90, 100];
 
 // タプル: 必ず2要素で、1つ目はstring、2つ目はnumberと決まっている
-const entry: [string, number] = ["瑛奈", 90];
+const entry: [string, number] = ["Neko", 90];
 
 entry[0]; // string型として扱われる
 entry[1]; // number型として扱われる
@@ -45,7 +45,7 @@ entry[1]; // number型として扱われる
 
 ```typescript
 const user: { name: string; age: number } = {
-  name: "瑛奈",
+  name: "Neko",
   age: 20,
 };
 
@@ -67,7 +67,7 @@ type User = {
   age: number;
 };
 
-const user: User = { name: "瑛奈", age: 20 };
+const user: User = { name: "Neko", age: 20 };
 
 function greetUser(u: User): string {
   return `こんにちは、${u.name}さん`;
@@ -87,8 +87,8 @@ type User = {
   nickname?: string; // なくてもよいプロパティ
 };
 
-const user1: User = { name: "瑛奈", age: 20 };
-const user2: User = { name: "瑛奈", age: 20, nickname: "えいなん" };
+const user1: User = { name: "Neko", age: 20 };
+const user2: User = { name: "Neko", age: 20, nickname: "ねこ" };
 ```
 
 ## 分割代入：オブジェクトや配列から値を取り出す
@@ -96,7 +96,7 @@ const user2: User = { name: "瑛奈", age: 20, nickname: "えいなん" };
 オブジェクトからプロパティを1つずつ取り出すとき、`user.name`のように書く代わりに、分割代入（destructuring）という書き方を使うとコードが短くなります。
 
 ```typescript
-const user: User = { name: "瑛奈", age: 20 };
+const user: User = { name: "Neko", age: 20 };
 
 // 従来の書き方
 const name1 = user.name;
@@ -104,7 +104,7 @@ const age1 = user.age;
 
 // 分割代入
 const { name, age } = user;
-console.log(name); // "瑛奈"
+console.log(name); // "Neko"
 console.log(age);  // 20
 ```
 
@@ -119,7 +119,7 @@ function greetUser({ name, age }: User): string {
 配列でも同様に分割代入ができ、位置で値を取り出します。
 
 ```typescript
-const entry: [string, number] = ["瑛奈", 90];
+const entry: [string, number] = ["Neko", 90];
 const [entryName, entryScore] = entry;
 ```
 
@@ -133,8 +133,8 @@ type User = {
   name: string;
 };
 
-const user: User = { id: 1, name: "瑛奈" };
-user.name = "えいな"; // OK
+const user: User = { id: 1, name: "Neko" };
+user.name = "ねこ"; // OK
 user.id = 2;          // エラー: Cannot assign to 'id' because it is a read-only property.
 ```
 

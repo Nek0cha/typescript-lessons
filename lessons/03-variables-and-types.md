@@ -5,7 +5,7 @@ TypeScriptで変数を宣言する方法は3つありますが、実際に使う
 ```typescript
 var oldStyle = "使わない";   // 古い書き方。挙動に癖があるため今は使わない
 let count = 1;               // 再代入する変数
-const name = "瑛奈";          // 再代入しない変数
+const name = "Neko";          // 再代入しない変数
 ```
 
 `var`はJavaScriptの初期からある書き方ですが、スコープ（変数が有効な範囲）の扱いに癖があり、意図しないバグの原因になりやすいため、現在はほぼ使われません。`let`と`const`はその問題を解決するために後から追加された書き方で、このシリーズでも常にどちらかを使います。
@@ -66,7 +66,7 @@ TypeScriptの基本的な型は次の7つです。JavaScriptにもともとあ�
 02章のコードで使った、バッククォート（`` ` ``）で囲む書き方をテンプレートリテラルと呼びます。文字列の中に`${}`で変数を埋め込めます。
 
 ```typescript
-const name = "瑛奈";
+const name = "Neko";
 const age = 20;
 
 // 従来の連結（+）でも書けるが、長くなると読みにくい
@@ -110,15 +110,15 @@ if (typeof value === "string") {
 次のコードにはTypeScriptがエラーを出す箇所が1つあります。どこか分かりますか（答えは次の行の下に反転して書いています）。
 
 ```typescript
-const userName = "瑛奈";
-userName = "えいな";
+const userName = "Neko";
+userName = "ねこ";
 console.log(`ユーザー名: ${userName}`);
 ```
 
 <details>
 <summary>答えを見る</summary>
 
-`userName`は`const`で宣言されているため、2行目の`userName = "えいな"`が再代入エラーになります。再代入する予定があるなら、宣言時に`let userName = "瑛奈";`とすべきでした。
+`userName`は`const`で宣言されているため、2行目の`userName = "ねこ"`が再代入エラーになります。再代入する予定があるなら、宣言時に`let userName = "Neko";`とすべきでした。
 
 </details>
 

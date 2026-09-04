@@ -48,5 +48,13 @@
 | never型 | 「絶対に発生しない値」を表す型。網羅性チェックに使う | [17](17-custom-type-guards.md) |
 | デコレータ | `@関数名`の形で、クラスやメソッドに横断的な処理を後付けする構文 | [18](18-decorators.md) |
 | vitest | このシリーズで使うテストランナー。describe/it/expectでテストを書く | [19](19-testing-with-vitest.md) |
+| スラッシュコマンド | Discordの`/`から始まる正式なコマンドUI。SlashCommandBuilderで定義する | [21](21-slash-commands.md) |
+| 構造的部分型（structural typing） | 値の由来ではなく、形（プロパティ・メソッドの有無）だけを見て型の一致を判断する仕組み | [21](21-slash-commands.md), [25](25-remind-command.md) |
+| インタラクション（interaction） | スラッシュコマンドの実行など、Discord上でのユーザー操作を表すイベント | [22](22-handling-interactions.md) |
+| ephemeral | コマンドを打った本人にしか見えない返信にするオプション | [22](22-handling-interactions.md) |
+| SQLite / node:sqlite | ファイル1つにデータを保存する軽量データベースと、それをNode.js標準で扱うモジュール | [23](23-persisting-data-with-sqlite.md) |
+| プリペアドステートメント | `?`をプレースホルダーにしてSQLと値を分離し、SQLインジェクションを防ぐ書き方 | [23](23-persisting-data-with-sqlite.md) |
+| setInterval | 指定した間隔で処理を繰り返し実行するJavaScript標準の仕組み | [25](25-remind-command.md) |
+| 型アサーション（as） | 「この値はこの型として扱ってよい」とTypeScriptに明示的に伝える書き方 | [09](09-async-await.md), [25](25-remind-command.md) |
 
 [目次に戻る](../README.md)

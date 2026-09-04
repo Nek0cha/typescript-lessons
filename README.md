@@ -13,13 +13,13 @@
 
 ## このシリーズのゴール
 
-TypeScriptの文法を一通り学んだあと、[12章](lessons/12-next-steps-discord-bot.md)でDiscord Botを作るための最初の一歩まで案内します(初級編)。そこからさらに一歩進みたい人向けに、TypeScriptの型システムをもう一段深く扱う中級編（13〜20章）も用意しています。中級編は説明だけでなく、実際に動くプロジェクト「[command-registry](project/command-registry/)」を作りながら進みます。
+TypeScriptの文法を一通り学んだあと、[12章](lessons/12-next-steps-discord-bot.md)でDiscord Botを作るための最初の一歩まで案内します(初級編)。そこからさらに一歩進みたい人向けに、TypeScriptの型システムをもう一段深く扱う中級編（13〜20章）、そして実際にスラッシュコマンドとデータベースを持つBotを組み立てるDiscord Bot編（21〜26章）も用意しています。どちらも説明だけでなく、実際に動くプロジェクト（[command-registry](project/command-registry/)、[discord-bot](project/discord-bot/)）を作りながら進みます。
 
 ## 使い方
 
 初級編（00〜09章）は通読を想定しています。TypeScriptの文法を順番に積み上げる構成になっているので、飛ばさずに順番に読んでください。10〜12章は少し性質が変わり、必要になったタイミングで読み返す参照部に近くなります。
 
-中級編（13〜20章）は、[command-registry](project/command-registry/)プロジェクトのコードを解説する形で書かれています。章を読みながら、実際に`pnpm install`してコードを動かし、`pnpm test`でテストを通すところまでやってみることを想定しています。
+中級編（13〜20章）は[command-registry](project/command-registry/)、Discord Bot編（21〜26章）は[discord-bot](project/discord-bot/)のコードを解説する形で書かれています。章を読みながら、実際に`pnpm install`してコードを動かし、`pnpm test`でテストを通すところまでやってみることを想定しています。
 
 各章の想定所要時間は目安であり、詰まった場合はもっとかかっても問題ありません。実際に手元でコードを動かしながら読むことを前提にした時間です。
 
@@ -56,6 +56,17 @@ TypeScriptの文法を一通り学んだあと、[12章](lessons/12-next-steps-d
 | 19 | [vitestでテストを書く](lessons/19-testing-with-vitest.md) | describe/it/expect、非同期・エラーのテスト |
 | 20 | [プロジェクト全体を振り返る](lessons/20-project-walkthrough.md) | 全部品のつながり、型安全性の考え方のまとめ |
 
+### Discord Bot編（実践プロジェクト: [discord-bot](project/discord-bot/)）
+
+| 章 | タイトル | 学べること |
+|---|---|---|
+| 21 | [スラッシュコマンドを作る](lessons/21-slash-commands.md) | SlashCommandBuilder、Pickによる型の緩和 |
+| 22 | [インタラクションを処理する](lessons/22-handling-interactions.md) | コマンド登録、interactionCreate、options |
+| 23 | [node:sqliteでデータを永続化する](lessons/23-persisting-data-with-sqlite.md) | SQLite、prepared statement |
+| 24 | [/noteコマンドを作る](lessons/24-note-command.md) | サブコマンド、これまでの内容の統合 |
+| 25 | [/remindコマンドと定期処理](lessons/25-remind-command.md) | setInterval、isSendable、構造的部分型でのテスト |
+| 26 | [Botらしいエラー処理と仕上げ](lessons/26-error-handling-and-wrap-up.md) | replied/deferred、プロセス全体のエラー処理 |
+
 用語のまとめは[用語集](lessons/99-glossary.md)にあります。本文中に出てきた専門用語で意味を忘れたときは、そちらを引いてください。
 
 ## パッケージ管理はpnpmを推奨します
@@ -74,4 +85,4 @@ TypeScriptの文法を一通り学んだあと、[12章](lessons/12-next-steps-d
 
 ## 最終更新日
 
-2026-09-04（中級編13〜20章、command-registryプロジェクトを追加）
+2026-09-04（Discord Bot編21〜26章、discord-botプロジェクトを追加）

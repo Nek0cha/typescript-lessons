@@ -31,7 +31,7 @@ registry.register(pingCommand);
 registry.register(addCommand);
 
 async function main() {
-  console.log(new Greeter().greet("瑛奈"));
+  console.log(new Greeter().greet("Neko"));
 
   console.log(await registry.execute("ping", {}));
   console.log(await registry.execute("add", { a: "3", b: "4" }));
